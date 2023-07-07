@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>关于 Hugo NexT 组织</title><url>/about.html</url><categories/><tags/><content type="html"> Hugo NexT 组织是由众多喜爱 NexT 主题及风格的世界各地友人共同组建而成，为的就是让这个主题继续在 Hugo 引擎中也能得到发扬光大，在此也欢迎你的加入！
+我们的愿景
+延续 NexT 经典的黑白调搭配，保持简单的易用性及强大的功能。
+使用反馈
+加入 GitHub Discussions
+或 Gitter
+在线讨论 🍻 GitHub Issues
+提交错误报告 🐛 GitHub Feature
+表新功能的想法 ✨ 同时国内用户也可加入 QQ 群交流： 604710815</content></entry><entry><title/><url>/post/gee%E5%AD%A6%E4%B9%A0/</url><categories/><tags/><content type="html"><![CDATA[  Gee学习单元测试：Go Test 单元测试简明教程 | 快速入门 | 极客兔兔 (geektutu.com)Gee框架的雏形1.将所有的HTTP请求转向了我们自己的处理逻辑。我们拦截了所有的HTTP请求，拥有了统一的控制入口。在这里我们可以自由定义路由映射的规则，也可以统一添加一些处理逻辑，例如日志、异常处理等。
+我们接下来重新组织上面的代码，搭建出整个框架的雏形。
+最终的代码目录结构是这样的。
+gee/ |--gee.go	//实现基本的get,post+uRl.path/run运行/Sever HTTP实现 |--go.mod	//打包管理 main.go go.mod 实现: 1.定义Engine结构体 router map[string]HandlerFunc 2.获取设置的get,post/path 并处理保存 3.run	监听端口, http.ListenAndServe(addr, engine)	传入engine处理器 并实现ServerHTTP 获取请求的URL,path是否存在, 存在则传入w,req处理 router的func module example go 1.13 require gee v0.0.0 replace gee =&amp;gt; ./gee 在 go.mod 中使用 replace 将 gee 指向 ./gee 从 go 1.11 版本开始，引用相对路径的 package 需要使用上述方式。
+gee包需要有go.mod文件
+项目Gee的go.mod需要引入gee 版本，和处理路径，
+replace gee =&amp;gt; ./gee
+go: malformed module path &amp;ldquo;gee&amp;rdquo;: missing dot in first path element go: gee@v0.0.0: malformed module path &amp;ldquo;gee&amp;rdquo;: missing dot in first path element
+2.将路由(router)独立出来，方便之后增强。
+设计上下文(Context)，封装 Request 和 Response ，提供对 JSON、HTML 等返回类型的支持。
+Handler的参数变成成了gee.Context，提供了查 …  ]]></content></entry><entry><title>站点示例</title><url>/flinks.html</url><categories/><tags/><content type="html"> 如想交换本站友情链接，请在评论区留下你的站点信息，格式参考如下：
+- name: Hugo-NexT desc: Hugo NexT 官方预览网站。 avatar: https://hugo-next.eu.org/imgs/hugo_next_avatar.png link: https://hugo-next.eu.org</content></entry></search>
